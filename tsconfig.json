@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"target": "es2015",
+		"module": "commonjs",
+		"outDir": "./build",
+		"strict": false,
+		"esModuleInterop": true,
+		"isolatedModules": false,
+		"noEmit": false,
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"baseUrl": "./",
+		"paths": {
+			"@config/*": ["src/config/*"],
+			"@controllers/*": ["src/controllers/*"],
+			"@middlewares/*": ["src/middlewares/*"],
+			"@models/*": ["src/models/*"],
+			"@workers/*": ["src/workers/*"],
+			"@definedTypes/*": ["types/*"],
+			"@services/*": ["src/services/*"],
+			"@utils/*": ["src/utils/*"],
+			"@enums": ["src/utils/enums.ts"],
+			"@app": ["src/app.ts"]
+		}
+	},
+	"include": ["src/**/*.ts", "types/*", "src/**/*.ts"],
+	"exclude": ["node_modules/"]
+}

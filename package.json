@@ -1,0 +1,36 @@
+{
+	"name": "deel-task",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"build": "tsc --project ./tsconfig.json",
+		"start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register build/src/server.js",
+		"dev": "nodemon src/server.ts",
+		"seed": "node -r ts-node/register/transpile-only -r tsconfig-paths/register scripts/seedDb.ts"
+	},
+	"nodemonConfig": {
+		"watch": [
+			"src"
+		],
+		"ext": "ts",
+		"exec": "ts-node -r tsconfig-paths/register src/server.ts"
+	},
+	"dependencies": {
+		"dotenv": "^16.3.1",
+		"express": "4.17.1",
+		"sequelize": "^6.23.0",
+		"sqlite3": "^5.0.0"
+	},
+	"devDependencies": {
+		"concurrently": "^8.0.1",
+		"nodemon": "^2.0.22",
+		"prettier": "^3.0.3",
+		"ts-node": "^10.9.2",
+		"tsconfig-paths": "^4.2.0",
+		"typescript": "^5.5.3"
+	},
+	"engines": {
+		"node": "18.18.0"
+	},
+	"engineStrict": true
+}
